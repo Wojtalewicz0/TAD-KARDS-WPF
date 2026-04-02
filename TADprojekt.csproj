@@ -1,0 +1,45 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="cover1.jpg" />
+    <None Remove="cover2.jpg" />
+    <None Remove="cover3.jpg" />
+    <None Remove="cover4.jpg" />
+    <None Remove="icon1.png" />
+    <None Remove="icon2.png" />
+    <None Remove="icon3.png" />
+    <None Remove="icon4.png" />
+    <None Remove="icon5.png" />
+    <None Remove="icon6.png" />
+    <None Remove="logo.png" />
+    <None Remove="logo2.png" />
+    <None Remove="logo3.png" />
+    <None Remove="main.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="cover1.jpg" />
+    <Resource Include="cover2.jpg" />
+    <Resource Include="cover3.jpg" />
+    <Resource Include="cover4.jpg" />
+    <Resource Include="icon1.png" />
+    <Resource Include="icon2.png" />
+    <Resource Include="icon3.png" />
+    <Resource Include="icon4.png" />
+    <Resource Include="icon5.png" />
+    <Resource Include="icon6.png" />
+    <Resource Include="logo.png" />
+    <Resource Include="logo2.png" />
+    <Resource Include="logo3.png" />
+    <Resource Include="main.png" />
+  </ItemGroup>
+
+</Project>
