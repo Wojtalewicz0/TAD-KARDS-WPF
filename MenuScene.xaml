@@ -50,9 +50,13 @@
             </TextBlock>
             <TextBlock x:Name="ShaderText" Text="Kompilowanie shaderów..." Foreground="White" FontSize="25" HorizontalAlignment="Left" Margin="30,0,0,30"
                 VerticalAlignment="Bottom" Opacity="0" />
-            <TextBlock x:Name="VersionText" Text="Version: 0.1.1 02-04-2026" Foreground="White" FontSize="19" HorizontalAlignment="Left" Margin="12,8,0,0"
+            <TextBlock x:Name="VersionText" Text="Ver: 0.2   08-04-2026" Foreground="White" FontSize="19" HorizontalAlignment="Left" Margin="12,8,0,0"
                 VerticalAlignment="Top" Opacity="0" />
-            <TextBlock x:Name="EpilepsiaText" Text="OSTRZEŻENIE PRZED EPILEPSJĄ FOTOGENNĄ&#x0a;..." TextAlignment="Center" Foreground="White" FontSize="24" HorizontalAlignment="Center"
+            <TextBlock x:Name="EpilepsiaText" Text="OSTRZEŻENIE PRZED EPILEPSJĄ FOTOGENNĄ&#x0a;TA APLIKACJA MOŻE ZAWIERAĆ MIGOCZĄCE ŚWIATŁA, SZYBKIE ZMIANY OBRAZÓW ORAZ WZORY WIZUALNE, KTÓRE U NIEKTÓRYCH OSÓB MOGĄ WYWOŁAĆ ATAK PADACZKI FOTOSENSYTYWNEJ.
+
+JEŚLI KIEDYKOLWIEK DOŚWIADCZYŁEŚ ATAKU PADACZKI, UTRATY PRZYTOMNOŚCI LUB INNYCH OBJAWÓW NEUROLOGICZNYCH, SKONSULTUJ SIĘ Z LEKARZEM PRZED ROZPOCZĘCIEM ROZGRYWKI.
+
+NATYCHMIAST PRZERWIJ GRĘ I SKONTAKTUJ SIĘ Z LEKARZEM, JEŚLI PODCZAS KORZYSTANIA Z APLIKACJI WYSTĄPIĄ TYPOWE OBJAWY." TextAlignment="Justify" TextWrapping="Wrap" Width="640" Foreground="White" FontSize="23" HorizontalAlignment="Center"
                 VerticalAlignment="Center" Opacity="0" />
             <TextBlock x:Name="CopyrightText" Text="Wszelkie prawa zastrzeżone&#x0a;2026" TextAlignment="Center" Foreground="White" FontSize="24" HorizontalAlignment="Center"
                 VerticalAlignment="Center" Opacity="0" />
@@ -106,10 +110,11 @@
                         <!-- NADANA NAZWA DO MODYFIKACJI Z POZIOMU C# -->
                         <TextBlock x:Name="VolumeText" Text="Głośność: 100%" FontFamily="Franklin Gothic Medium Cond" FontSize="40" Foreground="White" Margin="0,0,0,20" HorizontalAlignment="Center"/>
                         
-                        <Slider x:Name="VolumeSlider" ValueChanged="VolumeSlider_ValueChanged" Minimum="0" Maximum="100" Value="100" IsSnapToTickEnabled="True" TickFrequency="1" Height="40" Margin="0,0,0,50"/>
-                        <Button x:Name="CreditsButton" Style="{StaticResource MenuButtonStyle}" Content="Autorzy" FontSize="40" Click="CreditsButton_Click" Margin="200,0,200,0"/>
+                        <Slider x:Name="VolumeSlider" ValueChanged="VolumeSlider_ValueChanged" MouseLeave="VolumeSlider_MouseLeave" PreviewMouseLeftButtonUp="VolumeSlider_MouseUp" Minimum="0" Maximum="100" Value="100" IsSnapToTickEnabled="True" TickFrequency="1" Height="40" Margin="0,0,0,50"/>
+                        <Button x:Name="CreditsButton" Style="{StaticResource MenuButtonStyle}" Content="AUTORZY" FontSize="40" Click="CreditsButton_Click" Margin="200,0,200,20"/>
+                        <Button x:Name="ExitButton" Style="{StaticResource MenuButtonStyle}" Content="WYJŚCIE" FontSize="40" Click="ExitButton_Click" Margin="200,0,200,-40"/>
                     </StackPanel>
-                    <Button x:Name="CloseSettingsButton" Grid.Row="2" Style="{StaticResource MenuButtonStyle}" Content="POWRÓT" FontSize="20" Click="CloseSettingsButton_Click" HorizontalAlignment="Center" Width="400"/>
+                    <Button x:Name="CloseSettingsButton" Grid.Row="2" Style="{StaticResource MenuButtonStyle}" Content="POWRÓT" FontSize="40" Click="CloseSettingsButton_Click" HorizontalAlignment="Center" Width="400"/>
                 </Grid>
             </Border>   
             <Border x:Name="ConfigPanel" Width="1280" Height="720" Background="#f0222222" BorderBrush="#ededed" BorderThickness="5" CornerRadius="10" Opacity="0" IsHitTestVisible="False" Margin="0,0,0,170">

@@ -13,6 +13,7 @@
     <None Remove="cover2.jpg" />
     <None Remove="cover3.jpg" />
     <None Remove="cover4.jpg" />
+    <None Remove="cover6.jpg" />
     <None Remove="icon1.png" />
     <None Remove="icon2.png" />
     <None Remove="icon3.png" />
@@ -30,6 +31,7 @@
     <Resource Include="cover2.jpg" />
     <Resource Include="cover3.jpg" />
     <Resource Include="cover4.jpg" />
+    <Resource Include="cover6.jpg" />
     <Resource Include="icon1.png" />
     <Resource Include="icon2.png" />
     <Resource Include="icon3.png" />

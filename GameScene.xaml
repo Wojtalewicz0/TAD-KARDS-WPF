@@ -3,11 +3,46 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <Viewbox Stretch="Uniform">
         <Grid Background="Black" Width="1920" Height="1080">
-            <Border x:Name="MenuBackground" Opacity="0">
+            <Border x:Name="GameBackground" Opacity="0">
                 <Border.Background>
-                    <ImageBrush ImageSource="/cover2.jpg" Stretch="UniformToFill" Opacity="0.0" />
+                    <ImageBrush ImageSource="/cover6.jpg" Stretch="UniformToFill" />
                 </Border.Background>
             </Border>
+            
+            <Grid x:Name="GameUI" Opacity="0">
+                <!-- Gracz 1 -->
+                <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" Margin="50">
+                    <Border BorderBrush="#ededed" BorderThickness="4" CornerRadius="10" Background="#333333">
+                        <Image x:Name="Player1Icon" Width="180" Height="180" Stretch="UniformToFill" Margin="5">
+                            <Image.Clip><EllipseGeometry Center="90,90" RadiusX="90" RadiusY="90" /></Image.Clip>
+                        </Image>
+                    </Border>
+                    <TextBlock x:Name="Player1Name" Text="Gracz 1" FontFamily="Franklin Gothic Heavy Cond" FontSize="50" Foreground="White" HorizontalAlignment="Center" Margin="0,15,0,0">
+                        <TextBlock.Effect>
+                            <DropShadowEffect Color="Black" BlurRadius="10" ShadowDepth="0"/>
+                        </TextBlock.Effect>
+                    </TextBlock>
+                </StackPanel>
+
+                <!-- Gracz 2 -->
+                <StackPanel HorizontalAlignment="Right" VerticalAlignment="Top" Margin="50">
+                    <Border BorderBrush="#ededed" BorderThickness="4" CornerRadius="10" Background="#333333">
+                        <Image x:Name="Player2Icon" Width="180" Height="180" Stretch="UniformToFill" Margin="5">
+                            <Image.Clip><EllipseGeometry Center="90,90" RadiusX="90" RadiusY="90" /></Image.Clip>
+                        </Image>
+                    </Border>
+                    <TextBlock x:Name="Player2Name" Text="Gracz 2" FontFamily="Franklin Gothic Heavy Cond" FontSize="50" Foreground="White" HorizontalAlignment="Center" Margin="0,15,0,0">
+                        <TextBlock.Effect>
+                            <DropShadowEffect Color="Black" BlurRadius="10" ShadowDepth="0"/>
+                        </TextBlock.Effect>
+                    </TextBlock>
+                </StackPanel>
+
+                <!-- Plansza gry -->
+                <Border HorizontalAlignment="Center" VerticalAlignment="Center" Background="#b3222222" BorderBrush="#ededed" BorderThickness="4" CornerRadius="10" Padding="15">
+                    <UniformGrid x:Name="GameBoard" Rows="5" Columns="5" Width="700" Height="700" />
+                </Border>
+            </Grid>
         </Grid>
     </Viewbox>
 </UserControl>

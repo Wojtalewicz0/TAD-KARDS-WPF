@@ -8,23 +8,23 @@
     "net10.0-windows7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\zarow\\.nuget\\packages\\": {},
+    "C:\\Users\\Szymon\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\zarow\\Downloads\\TADprojekt\\TADprojekt.csproj",
+      "projectUniqueName": "c:\\Users\\Szymon\\Downloads\\TAD-KARDS-WPF\\TADprojekt.csproj",
       "projectName": "TADprojekt",
-      "projectPath": "C:\\Users\\zarow\\Downloads\\TADprojekt\\TADprojekt.csproj",
-      "packagesPath": "C:\\Users\\zarow\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\zarow\\Downloads\\TADprojekt\\obj\\",
+      "projectPath": "c:\\Users\\Szymon\\Downloads\\TAD-KARDS-WPF\\TADprojekt.csproj",
+      "packagesPath": "C:\\Users\\Szymon\\.nuget\\packages\\",
+      "outputPath": "c:\\Users\\Szymon\\Downloads\\TAD-KARDS-WPF\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\zarow\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Szymon\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],

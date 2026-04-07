@@ -85,7 +85,30 @@ namespace TADprojekt
             PlayerNameInput.Text = File.ReadAllText(playerId == 1 ? state.p1NameFile : state.p2NameFile);
             ConfigMainView.Visibility = Visibility.Collapsed;
             PlayerEditView.Visibility = Visibility.Visible;
+            
+            UpdateIconSelectionUI();
         }
+
+        private void UpdateIconSelectionUI()
+        {
+            // Opcjonalny reset przezroczystości wszystkich ikon
+            SelectIcon1.Opacity = 1.0;
+            SelectIcon2.Opacity = 1.0;
+            SelectIcon3.Opacity = 1.0;
+            SelectIcon4.Opacity = 1.0;
+            SelectIcon5.Opacity = 1.0;
+            SelectIcon6.Opacity = 1.0;
+
+            // Odczytanie wybranej ikony z pliku (wybieramy plik w zależności od tego, którego gracza edytujemy)
+            string selectedIconId = File.ReadAllText(currentEditingPlayer == 1 ? state.p1IconFile : state.p2IconFile).Trim();
+
+            // Odnalezienie kontrolki Image po jej nazwie (np. "SelectIcon1") i zmiana Opacity
+            if (FindName("SelectIcon" + selectedIconId) is Image selectedImage)
+            {
+                selectedImage.Opacity = 0.4;
+            }
+        }
+
         private void SelectIcon_Click(object sender, MouseButtonEventArgs e)
         {
             if (sender is Image clickedImage)
@@ -101,6 +124,9 @@ namespace TADprojekt
                 {
                     File.WriteAllText(state.p2IconFile, iconId);
                 }
+
+                // Odświeżenie wyglądu ikon, aby nowo kliknięta miała Opacity 0.5
+                UpdateIconSelectionUI();
             }
         }
         private void SavePlayerButton_Click(object sender, RoutedEventArgs e)
@@ -168,6 +194,7 @@ namespace TADprojekt
             FadeTo(MenuButton1, 1, 0.3);
             FadeTo(MenuButton2, 1, 0.3);
             FadeTo(MenuButton3, 1, 0.3);
+            File.WriteAllText(state.globalSoundFile, state.globalSound.ToString());
             whatMenu = 0;
         }
 
@@ -175,6 +202,12 @@ namespace TADprojekt
         {
             // TODO
         }
+
+        private void ExitButton_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
+        }
+
         private void MenuButton1_Click(object sender, RoutedEventArgs e)
         {
             if (whatMenu == 0)
@@ -220,13 +253,29 @@ namespace TADprojekt
             if (state != null)
             {
                 state.globalSound = e.NewValue;
-                File.WriteAllText(state.globalSoundFile, state.globalSound.ToString());
+                
                 
                 // Zabezpieczenie przed błędem, gdy kontrolki jeszcze się nie zbudowały
                 if (VolumeText != null) 
                 {
                     VolumeText.Text = $"Głośność: {e.NewValue}%";
                 }
+            }
+        }
+        
+        private void VolumeSlider_MouseLeave(object sender, MouseEventArgs e)
+        {
+            if (state != null)
+            {
+                File.WriteAllText(state.globalSoundFile, state.globalSound.ToString());
+            }
+        }
+
+        private void VolumeSlider_MouseUp(object sender, MouseButtonEventArgs e)
+        {
+            if (state != null)
+            {
+                File.WriteAllText(state.globalSoundFile, state.globalSound.ToString());
             }
         }
         
@@ -281,7 +330,7 @@ namespace TADprojekt
             await Task.Delay(TimeSpan.FromSeconds(3));
             FadeTo(LogoImage, 0, 1.5);
             await Task.Delay(TimeSpan.FromSeconds(4));
-            FadeTo(TitleBackground, 0.4, 8);
+            FadeTo(TitleBackground, 0.28, 8);
             await Task.Delay(TimeSpan.FromSeconds(2));
             FadeTo(LogoImage2, 0.9, 4);
             titleStarted = true;
