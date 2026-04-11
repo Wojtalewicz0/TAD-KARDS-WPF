@@ -71,3 +71,11 @@ C:\Users\Szymon\Downloads\TAD-KARDS-WPF\obj\Debug\net10.0-windows\refint\TADproj
 C:\Users\Szymon\Downloads\TAD-KARDS-WPF\obj\Debug\net10.0-windows\TADprojekt.pdb
 C:\Users\Szymon\Downloads\TAD-KARDS-WPF\obj\Debug\net10.0-windows\TADprojekt.genruntimeconfig.cache
 C:\Users\Szymon\Downloads\TAD-KARDS-WPF\obj\Debug\net10.0-windows\ref\TADprojekt.dll
+C:\Users\Szymon\Downloads\TAD-KARDS-WPF\bin\Debug\net10.0-windows\bf1942.mp3
+C:\Users\Szymon\Downloads\TAD-KARDS-WPF\bin\Debug\net10.0-windows\biahh.mp3
+C:\Users\Szymon\Downloads\TAD-KARDS-WPF\bin\Debug\net10.0-windows\drums.mp3
+C:\Users\Szymon\Downloads\TAD-KARDS-WPF\bin\Debug\net10.0-windows\hd2.mp3
+C:\Users\Szymon\Downloads\TAD-KARDS-WPF\bin\Debug\net10.0-windows\hda.mp3
+C:\Users\Szymon\Downloads\TAD-KARDS-WPF\bin\Debug\net10.0-windows\mohaa.mp3
+C:\Users\Szymon\Downloads\TAD-KARDS-WPF\obj\Debug\net10.0-windows\TADprojekt_Content.g.cs
+C:\Users\Szymon\Downloads\TAD-KARDS-WPF\bin\Debug\net10.0-windows\hd3.mp3

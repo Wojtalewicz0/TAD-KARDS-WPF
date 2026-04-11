@@ -9,11 +9,19 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="bf1942.mp3" />
+    <None Remove="biahh.mp3" />
+    <None Remove="blue.png" />
     <None Remove="cover1.jpg" />
     <None Remove="cover2.jpg" />
     <None Remove="cover3.jpg" />
     <None Remove="cover4.jpg" />
     <None Remove="cover6.jpg" />
+    <None Remove="cover7.jpg" />
+    <None Remove="drums.mp3" />
+    <None Remove="hd2.mp3" />
+    <None Remove="hd3.mp3" />
+    <None Remove="hda.mp3" />
     <None Remove="icon1.png" />
     <None Remove="icon2.png" />
     <None Remove="icon3.png" />
@@ -24,14 +32,42 @@
     <None Remove="logo2.png" />
     <None Remove="logo3.png" />
     <None Remove="main.png" />
+    <None Remove="mohaa.mp3" />
+    <None Remove="red.png" />
   </ItemGroup>
 
   <ItemGroup>
+    <Content Include="bf1942.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="biahh.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="drums.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="hd2.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="hd3.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="hda.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="mohaa.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="blue.png" />
     <Resource Include="cover1.jpg" />
     <Resource Include="cover2.jpg" />
     <Resource Include="cover3.jpg" />
     <Resource Include="cover4.jpg" />
     <Resource Include="cover6.jpg" />
+    <Resource Include="cover7.jpg" />
     <Resource Include="icon1.png" />
     <Resource Include="icon2.png" />
     <Resource Include="icon3.png" />
@@ -42,6 +78,7 @@
     <Resource Include="logo2.png" />
     <Resource Include="logo3.png" />
     <Resource Include="main.png" />
+    <Resource Include="red.png" />
   </ItemGroup>
 
 </Project>

@@ -26,6 +26,7 @@ namespace TADprojekt
         public string easterEggFile;
         public double globalSound;
         public string globalSoundFile;
+        public string randomStartFile;
         public GameState()
         {
             appDataFolder = System.IO.Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Wojtkiewicz_Projekt");
@@ -38,6 +39,7 @@ namespace TADprojekt
             easterEggFile = System.IO.Path.Combine(appDataFolder, "sobiePlik.sobieformat");
             globalSoundFile = System.IO.Path.Combine(appDataFolder, "global_sound.KochamZSEZARY");
             globalSound = 100;
+            randomStartFile = System.IO.Path.Combine(appDataFolder, "random_start.elitaerasmusa");
         }
     }
     public enum SceneType
@@ -88,6 +90,10 @@ namespace TADprojekt
             if (!File.Exists(state.globalSoundFile))
             {
                 File.WriteAllText(state.globalSoundFile, state.globalSound.ToString());
+            }
+            if (!File.Exists(state.randomStartFile))
+            {
+                File.WriteAllText(state.randomStartFile, "1");
             }
             state.globalSound = double.Parse(File.ReadAllText(state.globalSoundFile));
             scenes = new Dictionary<SceneType, UserControl>

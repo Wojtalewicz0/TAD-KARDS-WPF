@@ -18,6 +18,63 @@ namespace TADprojekt
         public bool titleStarted = false;
         public int currentEditingPlayer = 1;
         public int whatMenu = 0;
+        public double dev = 0.05; 
+        public Dictionary<string, MediaPlayer> activeSounds = new Dictionary<string, MediaPlayer>();
+        public Dictionary<string, double> activeSoundBaseVolumes = new Dictionary<string, double>();
+
+        public void PlaySound(string fileName, double baseVolume = 1.0)
+        {
+            try
+            {
+                MediaPlayer player;
+                
+                if (activeSounds.ContainsKey(fileName))
+                {
+                    player = activeSounds[fileName];
+                    player.Stop();
+                }
+                else
+                {
+                    player = new MediaPlayer();
+                    activeSounds[fileName] = player;
+                }
+
+                activeSoundBaseVolumes[fileName] = baseVolume;
+
+                string path = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, fileName);
+                player.Open(new Uri(path));
+                
+                player.Volume = baseVolume * (state.globalSound / 100.0);
+                player.Play();
+            }
+            catch (Exception ex)
+            {
+            }
+        }
+
+        public async void SoundFadeTo(string fileName, double targetVolume, double seconds)
+        {
+            if (!activeSounds.ContainsKey(fileName) || !activeSoundBaseVolumes.ContainsKey(fileName)) 
+                return;
+
+            MediaPlayer player = activeSounds[fileName];
+            double startVolume = activeSoundBaseVolumes[fileName];
+            double difference = targetVolume - startVolume;
+            
+            int steps = (int)(seconds * 30); 
+            if (steps <= 0) steps = 1;
+            int delayMs = (int)(seconds * 1000 / steps);
+
+            for (int i = 1; i <= steps; i++)
+            {
+                double currentVol = startVolume + (difference * i / steps);
+                activeSoundBaseVolumes[fileName] = currentVol;
+                
+                player.Volume = currentVol * (state.globalSound / 100.0);
+                await Task.Delay(delayMs);
+            }
+        }
+
         public void FadeTo(UIElement element, double targetOpacity, double seconds)
         {
             DoubleAnimation animation = new DoubleAnimation
@@ -246,14 +303,37 @@ namespace TADprojekt
             // Ustawienie wartości suwaka ORAZ początkowego tekstu
             VolumeSlider.Value = state.globalSound;
             VolumeText.Text = $"Głośność: {state.globalSound}%";
+            
+            if (File.Exists(state.randomStartFile))
+            {
+                RandomStartCheckBox.IsChecked = File.ReadAllText(state.randomStartFile).Trim() == "1";
+            }
         }
         
+        private void RandomStartCheckBox_Click(object sender, RoutedEventArgs e)
+        {
+            if (state != null)
+            {
+                File.WriteAllText(state.randomStartFile, RandomStartCheckBox.IsChecked == true ? "1" : "0");
+            }
+        }
+
         private void VolumeSlider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
             if (state != null)
             {
                 state.globalSound = e.NewValue;
                 
+                foreach (var kvp in activeSounds)
+                {
+                    string fileName = kvp.Key;
+                    MediaPlayer player = kvp.Value;
+                    if (activeSoundBaseVolumes.ContainsKey(fileName))
+                    {
+                        double baseVol = activeSoundBaseVolumes[fileName];
+                        player.Volume = baseVol * (state.globalSound / 100.0);
+                    }
+                }
                 
                 // Zabezpieczenie przed błędem, gdy kontrolki jeszcze się nie zbudowały
                 if (VolumeText != null) 
@@ -281,6 +361,8 @@ namespace TADprojekt
         
         public async void ShowMenu()
         {
+            SoundFadeTo("biahh.mp3", 1.0, 2.0);
+            
             FadeTo(LogoImage2, 0, 1.5);
             FadeTo(LogoImage3, 0.95, 5);
             SlideIn(LogoImage3, MoveImage, 3);
@@ -305,44 +387,50 @@ namespace TADprojekt
         }
         public async Task RunIntroSequence()
         {
-            await Task.Delay(TimeSpan.FromSeconds(8));
+            await Task.Delay(TimeSpan.FromSeconds(8 * dev));
             if (File.ReadAllText(state.everStartedFile) == "0") {
                 FadeTo(ShaderText, 1, 0.2);
-                await Task.Delay(TimeSpan.FromSeconds(4));
+                await Task.Delay(TimeSpan.FromSeconds(4 * dev));
                 FadeTo(ShaderText, 0, 0.2);
-                await Task.Delay(TimeSpan.FromSeconds(2));
+                await Task.Delay(TimeSpan.FromSeconds(2 * dev));
                 FadeTo(ShaderText, 1, 0.2);
-                await Task.Delay(TimeSpan.FromSeconds(2));
+                await Task.Delay(TimeSpan.FromSeconds(2 * dev));
                 FadeTo(ShaderText, 0, 0.2);
             }
             File.WriteAllText(state.everStartedFile, "1");
-            await Task.Delay(TimeSpan.FromSeconds(4));
-            FadeTo(EpilepsiaText, 1, 2);
-            await Task.Delay(TimeSpan.FromSeconds(2));
-            FadeTo(EpilepsiaText, 0, 1);
-            await Task.Delay(TimeSpan.FromSeconds(1.8));
+            await Task.Delay(TimeSpan.FromSeconds(4 * dev));
+            FadeTo(EpilepsiaText1, 1, 2);
+            FadeTo(EpilepsiaText2, 1, 2);
+            await Task.Delay(TimeSpan.FromSeconds(2 * dev));
+            FadeTo(EpilepsiaText1, 0, 1);
+            FadeTo(EpilepsiaText2, 0, 1);
+            await Task.Delay(TimeSpan.FromSeconds(1.8 * dev));
             FadeTo(CopyrightText, 1, 1);
-            await Task.Delay(TimeSpan.FromSeconds(2));
+            await Task.Delay(TimeSpan.FromSeconds(2 * dev));
             FadeTo(CopyrightText, 0, 1);
-            await Task.Delay(TimeSpan.FromSeconds(1));
+            await Task.Delay(TimeSpan.FromSeconds(1 * dev));
             ScaleElement(LogoScale, 1.28, 6.0);
             FadeTo(LogoImage, 1, 1.5);
-            await Task.Delay(TimeSpan.FromSeconds(3));
+            await Task.Delay(TimeSpan.FromSeconds(3 * dev));
             FadeTo(LogoImage, 0, 1.5);
-            await Task.Delay(TimeSpan.FromSeconds(4));
-            FadeTo(TitleBackground, 0.28, 8);
-            await Task.Delay(TimeSpan.FromSeconds(2));
+            await Task.Delay(TimeSpan.FromSeconds(4 * dev));
+            
+            FadeTo(TitleBackground, 0.25, 8);
+            PlaySound("biahh.mp3", 0.0);
+            SoundFadeTo("biahh.mp3", 0.6, 3.0);
+            
+            await Task.Delay(TimeSpan.FromSeconds(2 * dev));
             FadeTo(LogoImage2, 0.9, 4);
             titleStarted = true;
-            await Task.Delay(TimeSpan.FromSeconds(2));
+            await Task.Delay(TimeSpan.FromSeconds(2 * dev));
             for (int i = 0; i < 30; i++)
             {
                 if (isSpacePressed) break;
                 FadeTo(SpaceText, 1.0, 2.5);
-                await Task.Delay(TimeSpan.FromSeconds(2.5));
+                await Task.Delay(TimeSpan.FromSeconds(2.5 * dev));
                 if (isSpacePressed) break;
                 FadeTo(SpaceText, 0.1, 2.5);
-                await Task.Delay(TimeSpan.FromSeconds(2.5));
+                await Task.Delay(TimeSpan.FromSeconds(2.5 * dev));
             }
             if (!isSpacePressed)
             {

@@ -3,12 +3,15 @@
   "WorkspaceRootPath": "C:\\Users\\Szymon\\Downloads\\TAD-KARDS-WPF\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DFBA5FC1-F51A-0A9B-0148-1075E30AF19E}|TADprojekt.csproj|c:\\users\\szymon\\downloads\\tad-kards-wpf\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{DFBA5FC1-F51A-0A9B-0148-1075E30AF19E}|TADprojekt.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Szymon\\AppData\\Local\\Temp\\.vsdbgsrc\\89db2845bdf917a0c7fdee6fd569a7ff33ecae17fe3b06b6dcea476a9bf2c20f\\SafeFileHandle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DFBA5FC1-F51A-0A9B-0148-1075E30AF19E}|TADprojekt.csproj|c:\\users\\szymon\\downloads\\tad-kards-wpf\\gamescene.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{DFBA5FC1-F51A-0A9B-0148-1075E30AF19E}|TADprojekt.csproj|solutionrelative:gamescene.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DFBA5FC1-F51A-0A9B-0148-1075E30AF19E}|TADprojekt.csproj|c:\\users\\szymon\\downloads\\tad-kards-wpf\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{DFBA5FC1-F51A-0A9B-0148-1075E30AF19E}|TADprojekt.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DFBA5FC1-F51A-0A9B-0148-1075E30AF19E}|TADprojekt.csproj|c:\\users\\szymon\\downloads\\tad-kards-wpf\\menuscene.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
@@ -43,26 +46,37 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "SafeFileHandle.cs",
+              "DocumentMoniker": "C:\\Users\\Szymon\\AppData\\Local\\Temp\\.vsdbgsrc\\89db2845bdf917a0c7fdee6fd569a7ff33ecae17fe3b06b6dcea476a9bf2c20f\\SafeFileHandle.cs",
+              "RelativeDocumentMoniker": "..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\89db2845bdf917a0c7fdee6fd569a7ff33ecae17fe3b06b6dcea476a9bf2c20f\\SafeFileHandle.cs",
+              "ToolTip": "C:\\Users\\Szymon\\AppData\\Local\\Temp\\.vsdbgsrc\\89db2845bdf917a0c7fdee6fd569a7ff33ecae17fe3b06b6dcea476a9bf2c20f\\SafeFileHandle.cs[Tylko do odczytu]",
+              "RelativeToolTip": "..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\89db2845bdf917a0c7fdee6fd569a7ff33ecae17fe3b06b6dcea476a9bf2c20f\\SafeFileHandle.cs[Tylko do odczytu]",
+              "ViewState": "AgIAAFcAAAAAAAAAAAAAACABAAADAAAAAQAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-10T20:12:32.532Z",
+              "EditorCaption": "[Tylko do odczytu]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "C:\\Users\\Szymon\\Downloads\\TAD-KARDS-WPF\\MainWindow.xaml",
               "RelativeDocumentMoniker": "MainWindow.xaml",
               "ToolTip": "C:\\Users\\Szymon\\Downloads\\TAD-KARDS-WPF\\MainWindow.xaml",
               "RelativeToolTip": "MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-03-15T23:23:19.624Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-15T23:23:19.624Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "MenuScene.xaml",
               "DocumentMoniker": "C:\\Users\\Szymon\\Downloads\\TAD-KARDS-WPF\\MenuScene.xaml",
               "RelativeDocumentMoniker": "MenuScene.xaml",
               "ToolTip": "C:\\Users\\Szymon\\Downloads\\TAD-KARDS-WPF\\MenuScene.xaml",
               "RelativeToolTip": "MenuScene.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-03-25T10:22:27.492Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-25T10:22:27.492Z"
             },
             {
               "$type": "Document",
