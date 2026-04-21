@@ -1,0 +1,191 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="bf1942.mp3" />
+    <None Remove="biahh.mp3" />
+    <None Remove="bigboom.mp3" />
+    <None Remove="blue.png" />
+    <None Remove="brainbomber1.png" />
+    <None Remove="brainbomber2.png" />
+    <None Remove="brainbomber3.png" />
+    <None Remove="brainbomber4.png" />
+    <None Remove="card.mp3" />
+    <None Remove="cover1.jpg" />
+    <None Remove="cover2.jpg" />
+    <None Remove="cover3.jpg" />
+    <None Remove="cover4.jpg" />
+    <None Remove="cover5.jpg" />
+    <None Remove="cover6.jpg" />
+    <None Remove="cover7.jpg" />
+    <None Remove="drums.mp3" />
+    <None Remove="eco.png" />
+    <None Remove="hd2.mp3" />
+    <None Remove="hd3.mp3" />
+    <None Remove="hda.mp3" />
+    <None Remove="heavyaroundbomber1.png" />
+    <None Remove="heavyaroundbomber2.png" />
+    <None Remove="heavyaroundbomber3.png" />
+    <None Remove="heavybomber1.png" />
+    <None Remove="heavybomber2.png" />
+    <None Remove="heavybomber3.png" />
+    <None Remove="heavybomber4.png" />
+    <None Remove="icon1.png" />
+    <None Remove="icon2.png" />
+    <None Remove="icon3.png" />
+    <None Remove="icon4.png" />
+    <None Remove="icon5.png" />
+    <None Remove="icon6.png" />
+    <None Remove="intro.mp3" />
+    <None Remove="logo.png" />
+    <None Remove="logo2.png" />
+    <None Remove="logo3.png" />
+    <None Remove="mediumbomber1.png" />
+    <None Remove="mediumbomber2.png" />
+    <None Remove="mediumbomber3.png" />
+    <None Remove="mediumbomber4.png" />
+    <None Remove="mediumbomber5.png" />
+    <None Remove="mediumbomber6.png" />
+    <None Remove="mediumbomber7.png" />
+    <None Remove="mediumbomber8.png" />
+    <None Remove="mohaa.mp3" />
+    <None Remove="nieparzystyhorizontalbomber1.png" />
+    <None Remove="nieparzystyhorizontalbomber2.png" />
+    <None Remove="nieparzystyverticalbomber1.png" />
+    <None Remove="nieparzystyverticalbomber2.png" />
+    <None Remove="parzystyhorizontalbomber1.png" />
+    <None Remove="parzystyhorizontalbomber2.png" />
+    <None Remove="parzystyverticalbomber1.png" />
+    <None Remove="parzystyverticalbomber2.png" />
+    <None Remove="plane.mp3" />
+    <None Remove="plane.png" />
+    <None Remove="randombomber1.png" />
+    <None Remove="randombomber2.png" />
+    <None Remove="red.png" />
+    <None Remove="reverse.jpg" />
+    <None Remove="reverse.png" />
+    <None Remove="smallbomber1.png" />
+    <None Remove="smallbomber2.png" />
+    <None Remove="smallbomber3.png" />
+    <None Remove="smallbomber4.png" />
+    <None Remove="smallbomber5.png" />
+    <None Remove="smallbomber6.png" />
+    <None Remove="smallbomber7.png" />
+    <None Remove="smallbomber8.png" />
+    <None Remove="smallbomber9.png" />
+    <None Remove="smallboom.mp3" />
+    <None Remove="wholebomber1.png" />
+    <None Remove="wholebomber2.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="bf1942.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="biahh.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="bigboom.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="card.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="drums.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="hd2.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="hd3.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="hda.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="intro.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="mohaa.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="plane.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="smallboom.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="blue.png" />
+    <Resource Include="brainbomber1.png" />
+    <Resource Include="brainbomber2.png" />
+    <Resource Include="brainbomber3.png" />
+    <Resource Include="brainbomber4.png" />
+    <Resource Include="cover1.jpg" />
+    <Resource Include="cover2.jpg" />
+    <Resource Include="cover3.jpg" />
+    <Resource Include="cover4.jpg" />
+    <Resource Include="cover5.jpg" />
+    <Resource Include="cover6.jpg" />
+    <Resource Include="cover7.jpg" />
+    <Resource Include="eco.png" />
+    <Resource Include="heavyaroundbomber1.png" />
+    <Resource Include="heavyaroundbomber2.png" />
+    <Resource Include="heavyaroundbomber3.png" />
+    <Resource Include="heavybomber1.png" />
+    <Resource Include="heavybomber2.png" />
+    <Resource Include="heavybomber3.png" />
+    <Resource Include="heavybomber4.png" />
+    <Resource Include="icon1.png" />
+    <Resource Include="icon2.png" />
+    <Resource Include="icon3.png" />
+    <Resource Include="icon4.png" />
+    <Resource Include="icon5.png" />
+    <Resource Include="icon6.png" />
+    <Resource Include="logo.png" />
+    <Resource Include="logo2.png" />
+    <Resource Include="logo3.png" />
+    <Resource Include="mediumbomber1.png" />
+    <Resource Include="mediumbomber2.png" />
+    <Resource Include="mediumbomber3.png" />
+    <Resource Include="mediumbomber4.png" />
+    <Resource Include="mediumbomber5.png" />
+    <Resource Include="mediumbomber6.png" />
+    <Resource Include="mediumbomber7.png" />
+    <Resource Include="mediumbomber8.png" />
+    <Resource Include="nieparzystyhorizontalbomber1.png" />
+    <Resource Include="nieparzystyhorizontalbomber2.png" />
+    <Resource Include="nieparzystyverticalbomber1.png" />
+    <Resource Include="nieparzystyverticalbomber2.png" />
+    <Resource Include="parzystyhorizontalbomber1.png" />
+    <Resource Include="parzystyhorizontalbomber2.png" />
+    <Resource Include="parzystyverticalbomber1.png" />
+    <Resource Include="parzystyverticalbomber2.png" />
+    <Resource Include="plane.png" />
+    <Resource Include="randombomber1.png" />
+    <Resource Include="randombomber2.png" />
+    <Resource Include="red.png" />
+    <Resource Include="reverse.png" />
+    <Resource Include="smallbomber1.png" />
+    <Resource Include="smallbomber2.png" />
+    <Resource Include="smallbomber3.png" />
+    <Resource Include="smallbomber4.png" />
+    <Resource Include="smallbomber5.png" />
+    <Resource Include="smallbomber6.png" />
+    <Resource Include="smallbomber7.png" />
+    <Resource Include="smallbomber8.png" />
+    <Resource Include="smallbomber9.png" />
+    <Resource Include="wholebomber1.png" />
+    <Resource Include="wholebomber2.png" />
+  </ItemGroup>
+
+</Project>
